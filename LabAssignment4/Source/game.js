@@ -1,3 +1,6 @@
+function startGame(){
+    fs.start();
+}
 var fs = "1111:01|01|01|01*011|110:010|011|001*110|011:001|011|010*111|010:01|11|01:010|111:10|11|10*11|11*010|010|011:111|100:11|01|01:001|111*01|01|11:100|111:11|10|10:111|001", now = [3,0], pos = [4,0];
 var gP = function(x,y) { return document.querySelector('[data-y="'+y+'"] [data-x="'+x+'"]'); };
 var draw = function(ch, cls) {
@@ -9,6 +12,9 @@ var draw = function(ch, cls) {
                 gP(x+pos[0]+ch[0], y+pos[1]+ch[1]).classList.add(cls!==undefined?cls:'now');
             }
     pos = [pos[0]+ch[0], pos[1]+ch[1]];
+}
+start=function () {
+    document.body.insertBefore(this.canvas, document.body.childNodes[0]);
 }
 var deDraw = function(){ if(document.querySelectorAll('.now').length>0) deDraw(document.querySelector('.now').classList.remove('now')); }
 var check = function(){
