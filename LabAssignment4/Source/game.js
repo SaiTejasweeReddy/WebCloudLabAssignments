@@ -1,6 +1,8 @@
 function startGame(){
-    fs.start();
+    draw.start();
 }
+var audio = new Audio('audio_file.mp3');
+audio.play();
 var fs = "1111:01|01|01|01*011|110:010|011|001*110|011:001|011|010*111|010:01|11|01:010|111:10|11|10*11|11*010|010|011:111|100:11|01|01:001|111*01|01|11:100|111:11|10|10:111|001", now = [3,0], pos = [4,0];
 var gP = function(x,y) { return document.querySelector('[data-y="'+y+'"] [data-x="'+x+'"]'); };
 var draw = function(ch, cls) {
